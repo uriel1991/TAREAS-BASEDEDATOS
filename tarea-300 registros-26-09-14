@@ -1,0 +1,10 @@
+drop table REGISTRO;
+CREATE TABLE REGISTRO (ID INT,EDAD INT,NOMBRE VARCHAR2(50));
+begin
+for i in 1..300 loop
+dbms_output.put_line(i||'primer ciclo');
+insert into REGISTRO random.values(i,1..40,'Juan'||'Pedro'||'Ana');
+end loop;
+end;
+
+select * from registro;
